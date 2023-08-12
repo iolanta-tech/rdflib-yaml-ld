@@ -1,3 +1,9 @@
 .python-version
 .idea
 
+.gitignore
+htmlcov
+.pytest_cache
+coverage.xml
+.coverage
+**/__pycache__

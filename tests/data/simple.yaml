@@ -1,0 +1,4 @@
+"@context":
+  foo: https://example.org/foo
+
+foo: bar
