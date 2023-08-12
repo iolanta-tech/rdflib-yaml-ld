@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "rdflib-yaml-ld"
+version = "0.1.0"
+description = "YAML-LD plugin for rdflib"
+authors = ["Anatoly Scherbakov <altaisoft@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "rdflib_yaml_ld"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+rdflib = "^6.0.0"
+PyLD = "^2.0.3"
+
+[tool.poetry.group.dev.dependencies]
+jeeves-yeti-pyproject = "^0.2.20"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
