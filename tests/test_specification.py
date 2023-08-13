@@ -54,7 +54,12 @@ def test_spec(test_case: TestCase):
     if isinstance(test_case.result, Path) and test_case.result.suffix == '.yamlld':
         pytest.skip('Expansion test is not applicable.')
 
-    Graph().parse(
-        test_case.input,
-        format='yaml-ld',
-    )
+    if issubclass(error_class := test_case.result, Exception):
+        with pytest.raises(error_class):
+            Graph().parse(
+                test_case.input,
+                format='yaml-ld',
+            )
+
+    else:
+        raise ValueError(f'What to do with this test? {test_case}')
