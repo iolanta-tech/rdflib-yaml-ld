@@ -1,4 +1,4 @@
 [submodule "yaml-ld-spec"]
 	path = yaml-ld-spec
 	url = git@github.com:json-ld/yaml-ld.git
-	branch = issue-94-remove-obsolete-tests
+	branch = issue-94-misprint-in-test-file-name

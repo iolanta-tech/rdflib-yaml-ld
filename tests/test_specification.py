@@ -50,9 +50,9 @@ def load_tests() -> Iterable[TestCase]:
     load_tests(),
     ids=operator.attrgetter('test'),
 )
-def test_jsonld_spec(test_case: TestCase):
+def test_spec(test_case: TestCase):
     if isinstance(test_case.result, Path) and test_case.result.suffix == '.yamlld':
-        raise ValueError('Expansion test is not applicable.')
+        pytest.skip('Expansion test is not applicable.')
 
     Graph().parse(
         test_case.input,
