@@ -4,7 +4,6 @@ from rdflib import Graph, URIRef, BNode, Literal
 
 
 def test_parse():
-    from rdflib_yaml_ld import register
     # https://github.com/zimeon/rdflib-pyld-compat
     g = Graph()
     triples = list(g.parse(

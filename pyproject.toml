@@ -7,6 +7,12 @@ license = "MIT"
 readme = "README.md"
 packages = [{include = "rdflib_yaml_ld"}]
 
+[tool.poetry.plugins."rdf.plugins.parser"]
+"yaml-ld" = "rdflib_yaml_ld:YAMLLDParser"
+
+[tool.poetry.plugins."rdf.plugins.serializer"]
+"yaml-ld" = "rdflib_yaml_ld:YAMLLDSerializer"
+
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
 rdflib = "^6.0.0"
